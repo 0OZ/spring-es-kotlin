@@ -1,9 +1,9 @@
-# spring-es-kotlin
+# Spring Elasticsearch Kotlin Extensions
 
-Spring Elasticsearch Kotlin Extensions
+Extension functions for spring-elasticsearch-data
 
 implement
 
 ```gradle
-   implementation("so.arctic:elasticsearch:0.0.4")
+implementation("so.arctic:elasticsearch:<latest tag>")
 ```
