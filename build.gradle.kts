@@ -5,6 +5,7 @@ plugins {
    id("io.spring.dependency-management") version "1.1.0"
    kotlin("jvm") version "1.7.21"
    kotlin("plugin.spring") version "1.7.21"
+   `maven-publish`
 }
 
 group = "dev.zwei"
@@ -23,6 +24,7 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
+
    kotlinOptions {
       freeCompilerArgs = listOf("-Xjsr305=strict")
       jvmTarget = "17"
@@ -32,9 +34,9 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
    useJUnitPlatform()
 }
-apply(plugin = "maven-publish")
-apply(plugin = "org.jetbrains.dokka")
-configure<PublishingExtension> {
+
+
+publishing {
    repositories {
       maven {
          name = "GitHubPackages"
@@ -46,7 +48,7 @@ configure<PublishingExtension> {
       }
    }
    publications {
-      create<MavenPublication>("gpr") {
+      register<MavenPublication>("gpr") {
          groupId = "so.arctic"
          version = System.getenv("TAG") ?: "0.0.43"
          from(components["java"])
