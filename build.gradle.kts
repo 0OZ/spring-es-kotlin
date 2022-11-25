@@ -38,10 +38,10 @@ configure<PublishingExtension> {
    repositories {
       maven {
          name = "GitHubPackages"
-         url = uri("https://maven.pkg.github.com/0oz/estools")
+         url = uri("https://maven.pkg.github.com/0oz/spring-es-kotlin")
          credentials {
-                    username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-                    password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
          }
       }
    }
