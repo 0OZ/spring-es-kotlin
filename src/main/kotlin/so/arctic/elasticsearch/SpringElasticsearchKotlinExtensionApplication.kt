@@ -1,4 +1,4 @@
-package dev.zwei.elasticsearch
+package so.arctic.elasticsearch
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

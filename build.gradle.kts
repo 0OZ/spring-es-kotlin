@@ -8,7 +8,7 @@ plugins {
    `maven-publish`
 }
 
-group = "dev.zwei"
+group = "so.arctic"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
