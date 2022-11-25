@@ -7,7 +7,7 @@ on:
       - '**'
 jobs:
   publish:
-    runs-on: self-hosted
+    runs-on: ubuntu
     permissions:
       contents: read
       packages: write
